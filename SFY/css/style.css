@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    font-size: 1.5em;
+    color: #333;
+}
+p{
+    font-size: 1em;
+    color: #777;
+}
+
+/*CABEÇALHO*/
+
+.cabecalho{
+    width: 100%;
+    height: 150px;
+    padding: 50px 8%;
+    background: linear-gradient(rgb(16, 71, 134), white);
+}
+
+#logo-nome{
+   
+    width: 30%;
+    float: left;
+}
+#logo-form{
+    float: right;
+    display: inline-flex;
+}
+.form-control{
+    display: inline;
+    width: 30%;
+}
+#logo-nome img{
+    float: left;
+}
+#logo-nome h1{
+    bottom: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+/*preciso colocar logo*/
+.logo a {
+    
+    font-size: 24px;
+    color: #111;
+    
+} 
+
+
+
+.menu{
+    width: 100%;
+    float: left;
+    background-color: #111;
+    padding: 18px 8%;
+}
+.menu li {
+    float: left;
+}
+.menu li a {
+    color: #9d9d9d;
+    margin-right: 25px;
+}
+.menu li a:hover{
+    color: #fff;
+}
+/*principal*/
+.principal{
+    width: 100%;
+    float: left;
+    padding: 20px 8px;
+}
+.sobre{
+    width: 70%;
+    float: left;
+    padding: 0 20px 0 20px 0;
+}
+.sobre h2{
+    margin-bottom: 15px;
+}
+.sobre img {
+    width: 50%;
+    float: left;
+    border-radius: 5px;
+    margin: 0 15px 15px 0;
+}
+.sobre p {
+    text-align: justify;
+}
+.mod1{
+    float: center;
+}
+/*sidebar*/
+footer{
+    width: 100%;
+    float: right;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+.onde-estamos h2{
+    margin-bottom: 5px;
+}
+iframe{
+    width: 100%;
+    margin: 20px 0;
+}
+.onde-estamos li{
+    color: #777;
+    margin-bottom: 10px;
+}
+.onde-estamos i {
+    margin-right: 5px;
+}
+.btn{
+    background: aqua;
+    border-radius: 6px;
+}
+.mod2{
+    font-family: fantasy;
+    float: right;
+}
+.titulo10{
+    text-align: center;
+}
+.logodosite{
+    width: 15px;
+}
+.logodosite2{
+    width: 75px;
+}
+.blusa{
+    position: absolute;
+    width: 50%;
+    background-color: yellow;
+}
+.blusa2{
+    width: 25%;
+    background-color: #777;
+}
+#form22{
+    margin: 0 auto;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    width: 30%;
+}
+.t1{
+    font-size: 1.8em;
+}
+.card{
+    z-index: 0;
+}

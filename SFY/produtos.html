@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chat.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="css/img.png">
+  <title>Loja FY - For You</title>
+</head>
+<body>
+
+ 
+   <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Suporte com o Bot
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="content">
+        <div class="full-chat-block">
+         
+            <div class="outer-container">
+                <div class="chat-container">
+                    
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                  
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <div id="textInput" class="input-box">
+                                <div id="step-1" style="display: block">
+                                    <button onclick="getBotResponse('pconta', this, 'Qual o seu problema com a conta?')" class="btn btn-outline-primary" style="display: inline ;">Estou com problema na minha conta</button>
+                                    <button onclick="getBotResponse('pfinanceiro', this, 'Qual o seu problema do financeiro?')" class="btn btn-outline-primary" style="display: inline ;">Estou com problema no financeiro</button>
+                                    <button onclick="getBotResponse('outro', this, 'Em que podemos ajudar?')" class="btn btn-outline-primary" style="display: inline ;">Outro</button>
+                                </div>
+
+                                <div id="step-2">
+                                    <div id="pconta">
+                                        <button onclick="getBotResponse('pconta1', this, 'Verifique seu email e senha, e se o problema persistir crie um ticket!')" class="btn btn-outline-primary" style="display: inline ;">Não consigo fazer o login</button>
+                                        <button onclick="getBotResponse('pconta2', this, 'Será enviado um email de recuperação ao e-mail cadastrado')" class="btn btn-outline-primary" style="display: inline ;">Esqueci minha senha</button>
+                                        <button onclick="getBotResponse('pconta3', this, 'Verifique as informações e os parâmetros pedidos e se o problema persistir abra um ticket!')" class="btn btn-outline-primary" style="display: inline ;">Problemas no cadastro</button>
+                                    </div>
+                                    
+
+                                    <div id="pfinanceiro">
+                                        <button onclick="getBotResponse('pfinanceiro1', this, 'Abra um ticket na área do financeiro por favor!')" class="btn btn-outline-primary" style="display: inline ;">Não recebi comprovante de compra</button>
+                                        <button onclick="getBotResponse('pfinanceiro2', this, 'Escaneie o QR CODE e tente novamente, se não funcionar por favor abra um ticket ou contate shopforyou@financeiro.com.br')" class="btn btn-outline-primary" style="display: inline ;">Problemas com PIX</button>
+                                        <button onclick="getBotResponse('pfinanceiro3', this, 'Aceitamos pix, Mercado Pago, Paypal, cartão de crédito e boleto!')" class="btn btn-outline-primary" style="display: inline ;">Métodos de pagamento</button>
+                                    </div>
+                                    <div id="outro">
+                                        <button onclick="getBotResponse('outro1', this, 'Crie um ticket ou contate o nosso financeiro em shopforyou@financeiro.com.br')" class="btn btn-outline-primary" style="display: inline ;">Problemas com compra</button>
+                                        <button onclick="getBotResponse('outro2', this, 'Nosso suporte online funciona das 9:00 AM até 18:00 PM, ou contate nosso email shopforyou@contato.com.br')" class="btn btn-outline-primary" style="display: inline ;">Preciso de suporte</button>
+                                        <button onclick="getBotResponse('outro3', this, 'Mande um ticket para o nosso email shopforyou@contato.com.br com sua dúvida')" class="btn btn-outline-primary" style="display: inline ;">Criar ticket</button>
+                                    </div>
+                                    
+                                </div>
+                                <div id="step-3">
+                                    
+                                    
+                                    <div id="pconta1">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>      
+                                    <div id="pconta2">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>                            
+                                    <div id="pconta3">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>   
+                                    <div id="pfinanceiro1">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>      
+                                    <div id="pfinanceiro2">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>                            
+                                    <div id="pfinanceiro3">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>   
+                                    <div id="outro1">
+                                        <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div>   
+                                    <div id="outro2">
+                                       <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div> 
+                                    <div id="outro3">
+                                       <button onclick="getBotResponse('finish', this, 'Conseguimos solucionar seu problema?')" class="btn btn-outline-primary" style="display: inline ;">Ok obrigado!</button>
+                                    </div> 
+
+                                    
+                                                                                                                   
+                                   
+                                </div>
+                                <div id="step-4">
+                                   
+                                    <div id="finish">
+                                        <button onclick="resetBot()" class="btn btn-outline-primary" style="display: inline ;">Não, voltar do inicio</button>
+                                    </div>
+                                  
+                                </div>
+                                
+                                
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                onclick="heartButton()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendButton()"></i>
+                        </div> -->
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+    <header  class="cabecalho">
+        <div id="logo-nome">
+            <img class="logodosite2" src="css/img.png">
+            <h1 class="logo">
+                <a href="inicio.html" title="SFY - Shop For You ">SFY - Shop For You</a>
+            </h1>
+        </div>
+        <div id="logo-form">
+            <form method="post">
+                <input style="display: inline-flex; width: 70%;" type="text" placeholder="Faça uma busca" class="form-control">
+                <a href="#" style="margin-top:-3px;" class="btn btn-dark">Buscar</a>
+            </form>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+         
+            <li><a href="cadastre-se.html">Cadastre-se</a></li>
+            <li><a href="login.html">Fazer Login</a></li>
+
+        </ul>
+    
+    </nav>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="css/nike1.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Calça Nike Sportswear Club Fleece Masculina</h5>
+                  <h5 class="card-title">R$ 309,99</h5>
+                  <p class="card-text">Calça Nike Sportswear Club Fleece Masculina, imagem meramente ilustrativa, mais informações no site oficial da Nike.</p>
+                  <a href="https://www.nike.com.br/calca-jogger-nike-sportswear-club-fleece-masculina-021797.html?cor=ID&utm_source=googleshop&utm_medium=CPC&utm_campaing=Top_Sellers_PRS&gclid=Cj0KCQjw--2aBhD5ARIsALiRlwAKPbJjc5OVNS7xnRm8DJL5RkHu5lnIMU7SZxHydazJzkYoKKE8cQgaAgh3EALw_wcB" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="css/nike2.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Jaqueta Nike Sportswear Windrunner Masculina</h5>
+                  <h5 class="card-title">R$ 499,99</h5>
+                  <p class="card-text">Jaqueta Nike Sportswear Windrunner Masculina, imagem meramente ilustrativa, mais informações no site oficial da Nike.
+                  </p>
+                  <a href="https://www.nike.com.br/jaqueta-nike-sportswear-windrunner-masculina-011917.html?cor=ID" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="css/adidas1.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Jaqueta corta-vento Oztradamus Adidas</h5>
+                  <h5 class="card-title">R$ 599,99</h5>
+                  <p class="card-text">Jaqueta corta-vento Oztradamus, imagem meramente ilustrativa, mais informações no site oficial da Adidas.</p>
+                  <a href="https://www.adidas.com.br/jaqueta-corta-vento-oztradamus/HC7140.html" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="css/adidas2.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Calça Own The Run Cooler Adidas</h5>
+                  <h5 class="card-title">R$ 299,99</h5>
+                  <p class="card-text">Calça Own The Run Cooler Adidas, imagem meramente ilustrativa, mais informações no site oficial da Adidas.</p>
+                  <a href="https://www.adidas.com.br/calca-own-the-run-cooler/GM1598.html" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+        </div>
+        
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="css/airforce.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Tênis Nike Air Force 1 "07 LV8 Masculino</h5>
+                  <h5 class="card-title">R$ 899,99</h5>
+                  <p class="card-text">Tênis Nike Air Force 1 "07 LV8 Masculino, imagem meramente ilustrativa, mais informações no site oficial da Nike.</p>
+                  <a href="https://www.nike.com.br/tenis-nike-air-force-1-07-lv8-masculino-023304.html?cor=51" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="css/adidas3.jpg" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Tênis NMD_R1 Adidas</h5>
+                  <h5 class="card-title">R$ 899,99</h5>
+                  <p class="card-text">Tênis NMD_R1 Adidas, imagem meramente ilustrativa, mais informações no site oficial da Adidas.</p>
+                  <a href="https://www.adidas.com.br/tenis-nmd_r1/FZ6056.html" class="btn btn-primary">Visitar</a>
+                </div>
+              </div>
+        </div>
+       
+      
+
+    </div>
+
+      <!-- 
+    -->
+
+
+    <footer class="text-center">
+            <h2>Onde Estamos</h2>
+            <p>Endereço: Av. Rei Alberto I, 268 - Ponta da Praia, Santos - SP, 11030-380</p>
+            <iframe class="mod1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.183008846908!2d-46.30243324893218!3d-23.989313783345057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce0213d836dce7%3A0x8daf067b12a2e46f!2sAv.%20Rei%20Alberto%20I%2C%20268%20-%20Ponta%20da%20Praia%2C%20Santos%20-%20SP%2C%2011030-380!5e0!3m2!1sen!2sbr!4v1666373979032!5m2!1sen!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/responses.js"></script>
+    <script src="scripts/chat.js"></script>
+</body>
+</html>
